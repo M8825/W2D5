@@ -12,8 +12,7 @@ cur_method_name =  cur_method_name.split("def")[-1][0...parentheses_idx][0...-1]
 
 spec_folder = "#{ARGV[1]}/spec/"
 
-
-spec_file = `ls #{spec_folder}*#{f_name}_spec.rb`
+spec_file = "#{spec_folder}01_#{f_name}_spec.rb"
 line_num = `grep -n "##{cur_method_name}" #{spec_file}`
 line_num.to_s
 
